@@ -9,8 +9,9 @@ public class EjercicioShakira {
 
 	public static void main(String[] args) {
 		
-		int secondsOfVideo = (3 * 60) + 57;
-		double kcalPerSecond = 20 / 12;
+		int secondsOfVideo = (3 * 60) + 57; // Se podría crear una variable minutos-secgundos, 
+											// fragmentar la operación en variables.
+		double kcalPerSecond = 20.0 / 12.0;
 		
 		double totalKcal = kcalPerSecond * secondsOfVideo;
 		
