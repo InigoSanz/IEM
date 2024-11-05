@@ -6,7 +6,7 @@ public class Ejercicio3 {
 		// TODO Auto-generated method stub
 		int distance = 350; //Distancia recorrida en km
 		int fuel = 22; // combustible gastado en litros
-		int consumption = distance / fuel;
+		double consumption = distance / fuel;
 		
 		System.out.println(consumption + " Kilometros por litro.");
 	}

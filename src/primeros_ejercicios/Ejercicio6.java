@@ -7,7 +7,7 @@ public class Ejercicio6 {
 		int triangleBase = 12;
 		int triangleHeight = 15;
 		
-		int triangleArea = (triangleBase * triangleHeight) / 2; // No se utiliza double por que el resultado es entero?
+		double triangleArea = (triangleBase * triangleHeight) / 2;
 		
 		System.out.println("El area del triangulo es: " + triangleArea);
 		

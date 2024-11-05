@@ -16,7 +16,6 @@ public class Ejercicio11 {
 		
 		//Con boolean seria
 		boolean isPlatinum = n >= nMin;
-		
 		System.out.println(isPlatinum);
 		
 	}
