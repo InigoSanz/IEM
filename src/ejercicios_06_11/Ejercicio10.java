@@ -8,7 +8,7 @@ import java.util.Scanner;
  * - Introduciento un % de descuento calcule el precio final a aplicar al cliente.
  * - Saber el importe en euros que se le ha descontado al cliente.
  */
-public class Ejercicio1 {
+public class Ejercicio10 {
 
 	public static void main(String[] args) {
 		
