@@ -11,7 +11,7 @@ public class Ejercicio11 {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.printf("Introduce un numero: ");
+		System.out.printf("Introduce un número: ");
 		
 		int n = scanner.nextInt();
 		

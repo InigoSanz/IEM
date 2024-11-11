@@ -17,9 +17,9 @@ public class Ejercicio13 {
 		
 		scanner.close();
 		
-		int finalHours = seconds / 3600; // Dividimos por los segundos que tiene una hora
-		int finalMins = (seconds % 3600) / 60; // Cogemos el sobrante del modulo y dividimos entre 60 para obtener los minutos.									
-		int finalSeconds = seconds % 60; // Cogemos el sobrante del módulo para obtener los segundos.
+		int finalHours = seconds / 3600; // Dividimos por los segundos que tiene una hora para sacar las horas
+		int finalMins = (seconds % 3600) / 60; // Cogemos el resto del modulo y dividimos entre 60 para obtener los minutos.									
+		int finalSeconds = seconds % 60; // Cogemos el resto del módulo para obtener los segundos.
 		
 		System.out.printf("%d segundos es lo mismo que %02d horas, %02d minutos y %02d segundos.", seconds, finalHours, finalMins, finalSeconds);
 	}

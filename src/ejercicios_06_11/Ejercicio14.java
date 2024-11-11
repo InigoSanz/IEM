@@ -17,7 +17,7 @@ public class Ejercicio14 {
 		
 		scanner.close();
 		
-		double euroToPeseta = 166.386;
+		double euroToPeseta = 166.386; // Podríamos dejarlo como final
 		
 		double finalPesetas = euros * euroToPeseta;
 		
