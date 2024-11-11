@@ -19,6 +19,7 @@ public class Ejercicio5 {
 		scanner.close();
 		
 		boolean isEmpty = password.isEmpty(); // Si la contraseña es vacía devuelve true por defecto, sino devuelve false.
+		
 		/*
 		 * Podriamos introducir una contraseña
 		 * Luego sacar la longitud
