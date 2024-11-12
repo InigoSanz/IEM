@@ -26,7 +26,7 @@ public class Ejercicio2 {
 		
 		// Formula volumen esfera: 4/3 * PI * radio^3
 		
-		double sphereVolume = (4 / 3) * PI * Math.pow(radius, 3); // o multiplicar por si mismo 2 veces
+		double sphereVolume = (4.0 / 3.0) * PI * Math.pow(radius, 3); // o multiplicar por si mismo 2 veces
 		
 		System.out.printf("El volumen de una esfera de radio %.2f es de %.2f", radius, sphereVolume);
 		
