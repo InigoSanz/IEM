@@ -9,6 +9,12 @@ public class Ejercicio4 {
 
 	public static void main(String[] args) {
 		
+		/*
+		 - Aquí seria simplemente definir dos variables int
+		 - En una hacer * 2
+		 - En otra hacer * 3
+		 - Luego imprimirlas
+		 */
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.printf("Introduce un número sin decimales: ");
@@ -17,9 +23,7 @@ public class Ejercicio4 {
 		
 		scanner.close();
 		
-		int n;
-		
-		for (n = 2; n < 4; n++) {
+		for (int n = 2; n < 4; n++) {
 			
 			int out = number * n;
 			
