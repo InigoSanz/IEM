@@ -12,8 +12,8 @@ public class Ejercicio20 {
 		System.out.println("  A    B    AND");
 		
 		// Utilizamos un for each para recorrer cada valor de values y asignarselo a "a" y a "b"
-		for(boolean a: values) {
-			for(boolean b: values) {
+		for (boolean a: values) {
+			for (boolean b: values) {
 				System.out.println(a + " " +  b + " " + (a && b));
 			}
 		}
