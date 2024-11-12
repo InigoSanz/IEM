@@ -14,8 +14,10 @@ public class Ejercicio9 {
 		
 		// Fórmula tiempo t = d/v
 		double t = distance / speed;
+		int min = (int) t / 60;
+		double s = t % 60;
 		
-		System.out.printf("El tiempo que tarda en llegar un rayo de sol a la tierra es de %.2f segundos", t);
+		System.out.printf("El tiempo que tarda en llegar un rayo de sol a la tierra es de %.2f segundos o %d minutos y %.0f segundos", t, min, s);
 
 	}
 
