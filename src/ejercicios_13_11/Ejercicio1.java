@@ -19,14 +19,14 @@ public class Ejercicio1 {
 		
 		int maxWeightElevator = 425;
 		
-		int maxMenInElevator = maxWeightElevator / (int) menWeight;
+		int maxMenInElevator = (int) (maxWeightElevator / menWeight);
 		
 		System.out.printf("La cantidad máxima de hombres que pueden subir es %d.\n", maxMenInElevator);
 		
 		// B)
 		double womenWeight = 64.5;
 		
-		int maxWomenInElevator = maxWeightElevator / (int) womenWeight;
+		int maxWomenInElevator = (int) (maxWeightElevator / womenWeight);
 		
 		System.out.printf("La cantidad máxima de mejeres que pueden subir es %d.\n", maxWomenInElevator);
 		
@@ -48,9 +48,9 @@ public class Ejercicio1 {
 		double totalWeight1 = (int) (menWeightTriple + womenWeightTriple);
 		
 		if (totalWeight1 <= maxWeightElevator) {
-			System.out.printf("Si e pueden subir 3 hombres y 3 mujeres.\n");
+			System.out.printf("Si se pueden subir 3 hombres y 3 mujeres.\n");
 		} else {
-			System.out.printf("No e pueden subir 3 hombres y 3 mujeres.\n");
+			System.out.printf("No se pueden subir 3 hombres y 3 mujeres.\n");
 		}
 	}
 
