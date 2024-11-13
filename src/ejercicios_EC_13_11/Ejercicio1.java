@@ -26,11 +26,9 @@ public class Ejercicio1 {
 		
 		if (passwd.equals(masterPasswd)) {
 			System.out.printf("Contraseña correcta.\n");
-		} else {
-			System.out.printf("Contraseña incorrecta.\n");
-		}
+		} 
 		
-		System.out.printf("Hasta luego, gracias por usar el comprobado de contraseñas.");
+		System.out.printf("Hasta luego, gracias por usar el comprobador de contraseñas.");
 
 	}
 
