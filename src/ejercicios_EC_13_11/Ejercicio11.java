@@ -20,6 +20,8 @@ public class Ejercicio11 {
 		
 		double n2 = scanner.nextDouble();
 		
+		scanner.close();
+		
 		String mensaje = (n1 > n2) ? "El mayor de los dos números es: " + n1 : "El mayor de los dos números es: " + n2;
 		
 		System.out.printf("%s", mensaje);
