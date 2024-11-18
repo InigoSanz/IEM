@@ -31,7 +31,7 @@ public class Ejercicio13 {
 		
 		scanner.close();
 		
-		double notaMedia = (redaccion + dictado + oral + escrito) / 4;
+		double notaMedia = (redaccion + dictado + oral + escrito) / 4.0;
 		
 		double notaMediaMin = 6.5;
 		double notaMin = 5;
