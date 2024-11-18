@@ -30,9 +30,7 @@ public class Ejercicio19 {
 		String cafeLowerCase = cafe.toLowerCase();
 		
 		scanner.close();
-		
-		
-		
+			
 		switch (cafeLowerCase) {
 			case "cafe con leche":
 				System.out.println("Café y leche.");
