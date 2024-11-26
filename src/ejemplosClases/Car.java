@@ -8,6 +8,22 @@ public class Car {
 	public String color;
 	public int registration;
 	public boolean isNew; 
+	public String marca;
+	public String modelo;
+	
+	public Car() {
+		
+	}
+	
+	public Car(int registration) {
+		this.registration = registration;
+	}
+	
+	public Car(String marca, String modelo, int registration) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.registration = registration;
+	}
 	
 	public int setRegistration(int newRegistration) {
 		
@@ -19,4 +35,33 @@ public class Car {
 		
 		return registration;		
 	}
+	
+	public void setColor(String color) {
+		this.color = color;
+	}
+	
+	public String getColor() {
+		return color;
+	}
+	
+	@Override
+	public boolean equals(Object object) {
+		
+		Car c = (Car) object;
+		
+		boolean registrationIsTrue = c.registration == registration;
+		
+		return registrationIsTrue;	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
