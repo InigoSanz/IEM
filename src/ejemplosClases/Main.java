@@ -7,9 +7,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Car car = new Car("Audi", "A3", 9994);
+		Car car = new Car("Audi", "A3", "Blanco");
 		
-		Car car1 = new Car("BMW", "Serie 3", 4764);
+		Car car1 = new Car(9994);
 		
 		boolean areEquals = car.equals(car1);
 		

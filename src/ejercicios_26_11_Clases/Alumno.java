@@ -17,10 +17,19 @@ public class Alumno {
 	// private String esOnline;
 	public String wifiPassword;
 	
-	public Alumno(String name, int age, boolean isOnline) {
+	public Alumno(String name) {
+		this.name = name;
+	}
+	
+	public Alumno(String name, String nationality) {
+		this.name = name;
+		this.nationality = nationality;
+	}
+	
+	public Alumno(String name, int age, String nationality) {
 		this.name = name;
 		this.age = age;
-		this.isOnline = isOnline;
+		this.nationality = nationality;
 	}
 	
 	public void setName(String name) {
@@ -61,5 +70,31 @@ public class Alumno {
 	
 	public String getNationality() {
 		return this.nationality;
-	}	
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		
+		if (!(obj instanceof Alumno)) {
+			return false;
+		}
+		
+		Alumno alu = (Alumno) obj;
+		
+		if (alu.name == null || alu.nationality == null) {
+			return false;			
+		}
+		
+		boolean isTrue = alu.name.equals(this.name) && alu.nationality.equals(this.nationality);
+		
+		return isTrue;
+	}
+	
+	@Override
+	public String toString() {
+		
+		return "Hola, me llamo " + this.name + "\n" +
+		"Tengo " + this.age + " años\n" +
+				"Y mi nacionalidad es " + this.nationality;
+	}
 }

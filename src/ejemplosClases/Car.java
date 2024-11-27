@@ -19,10 +19,10 @@ public class Car {
 		this.registration = registration;
 	}
 	
-	public Car(String marca, String modelo, int registration) {
+	public Car(String marca, String modelo, String color) {
 		this.marca = marca;
 		this.modelo = modelo;
-		this.registration = registration;
+		this.color = color;
 	}
 	
 	public int setRegistration(int newRegistration) {
@@ -47,15 +47,28 @@ public class Car {
 	@Override
 	public boolean equals(Object object) {
 		
+		if (!(object instanceof Car)) {
+			return false;
+		}
+		
 		Car c = (Car) object;
 		
-		boolean registrationIsTrue = c.registration == registration;
+		if (c.marca == null) {
+			return false;
+		}
+		
+		boolean registrationIsTrue = c.marca.equals(marca);
 		
 		return registrationIsTrue;	
 	}
 	
-	
-	
+	@Override
+	public String toString() {
+		
+		return "El coche es de la marca " + this.marca + "\n" +
+		"EL modelo es el " + this.modelo + "\n" +
+				"Y también añadir que es de color " + this.color;
+	}
 	
 	
 	
