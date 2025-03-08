@@ -17,9 +17,10 @@ public class Bicicleta extends VehiculoPadre implements InterfazVehiculo {
 		
 		int nRandom = random.nextInt(3, 9);
 		setDistanciaRecorrida(getDistanciaRecorrida() + nRandom);
-		setCombustible(getCombustible() + UNIDADES);
+		setCombustible(getCombustible() - UNIDADES);
 			
-		System.out.println("Se ha recorrido " + nRandom + "km/h y se ha consumido " + UNIDADES + " de combustible, restante " + getCombustible());			
+		System.out.println("Se ha acelerado " + nRandom + " km/h y se ha consumido " + UNIDADES + " de combustible, restante " + getCombustible());
+		System.out.println("Distancia recorrida: " + getDistanciaRecorrida());
 	}
 	
 	@Override
