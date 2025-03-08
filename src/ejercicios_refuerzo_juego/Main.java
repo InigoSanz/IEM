@@ -2,6 +2,9 @@ package ejercicios_refuerzo_juego;
 
 import java.util.Scanner;
 
+/**
+ * Clase Main de programa.
+ */
 public class Main {
 
 	public static void main(String[] args) {
@@ -22,13 +25,19 @@ public class Main {
 
 		switch (opcion) {
 		case 1:
-			seleccion = new Coche("Batmóvil");
+			System.out.print("Introduce el nombre de tu coche: ");
+			String nombreCoche = scanner.nextLine();
+			seleccion = new Coche(nombreCoche);
 			break;
 		case 2:
-			seleccion = new Bicicleta("Bici Súper Rápida");
+			System.out.print("Introduce el nombre de tu bicicleta: ");
+			String nombreBici = scanner.nextLine();
+			seleccion = new Bicicleta(nombreBici);
 			break;
 		case 3:
-			seleccion = new Motocicleta("Motocluster");
+			System.out.print("Introduce el nombre de tu motocicleta: ");
+			String nombreMoto = scanner.nextLine();
+			seleccion = new Motocicleta(nombreMoto);
 			break;
 		default:
 			System.err.println("Opción no válida, reinicia el programa.");
@@ -67,20 +76,20 @@ public class Main {
 			if (seleccion.getDistanciaRecorrida() < 100 && (motoContrincante.getDistanciaRecorrida() == 100
 					|| motoContrincante.getDistanciaRecorrida() > 100)) {
 				System.out.println("Gana " + motoContrincante.getNombre() + ", distancia recorrida:"
-						+ motoContrincante.getCombustible());
+						+ motoContrincante.getDistanciaRecorrida() + " Kms");
 				fin = true;
 				break;
 			} else if ((seleccion.getDistanciaRecorrida() == 100 || seleccion.getDistanciaRecorrida() > 100)
 					&& motoContrincante.getDistanciaRecorrida() < 100) {
 				System.out.println("Gana " + seleccion.getNombre() + ", distancia recorrida: "
-						+ seleccion.getDistanciaRecorrida());
+						+ seleccion.getDistanciaRecorrida() + " Kms");
 				fin = true;
 				break;
 			} else if ((seleccion.getDistanciaRecorrida() == 100 || seleccion.getDistanciaRecorrida() > 100)
 					&& (motoContrincante.getDistanciaRecorrida() == 100
 							|| motoContrincante.getDistanciaRecorrida() > 100)) {
 				System.out.println("Hay un empate entre " + seleccion.getNombre() + " y " + motoContrincante.getNombre()
-						+ ", ambos han recorrido " + seleccion.getDistanciaRecorrida());
+						+ ", ambos han recorrido " + seleccion.getDistanciaRecorrida() + " Kms");
 				fin = true;
 				break;
 			}
@@ -92,17 +101,20 @@ public class Main {
 			 */
 			if ((seleccion.getCombustible() == 0 || seleccion.getCombustible() < 0)
 					&& motoContrincante.getCombustible() > 0) {
-				System.out.println("Gana " + motoContrincante.getNombre());
+				System.out.println("Gana " + motoContrincante.getNombre() + ", combustible: "
+						+ motoContrincante.getCombustible() + " L");
 				fin = true;
 				break;
 			} else if (seleccion.getCombustible() > 0
 					&& (motoContrincante.getCombustible() == 0 || motoContrincante.getCombustible() < 0)) {
-				System.out.println("Gana " + seleccion.getNombre());
+				System.out.println(
+						"Gana " + seleccion.getNombre() + ", combustible: " + seleccion.getCombustible() + " L");
 				fin = true;
 				break;
 			} else if ((seleccion.getCombustible() == 0 || seleccion.getCombustible() < 0)
 					&& (motoContrincante.getCombustible() == 0 || motoContrincante.getCombustible() < 0)) {
-				System.out.println("Empate entre " + seleccion.getNombre() + " y " + motoContrincante);
+				System.out.println("Empate entre " + seleccion.getNombre() + " y " + motoContrincante
+						+ ", ambos se han quedado sin combustible");
 				fin = true;
 				break;
 			}
