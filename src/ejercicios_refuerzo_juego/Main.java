@@ -56,35 +56,41 @@ public class Main {
 			System.out.println("\nTurno del contrincante: ");
 			motoContrincante.acelerarFrenar();
 			
-			if (seleccion.getCombustible() == 0 && motoContrincante.getCombustible() > 0) {
+			/*
+			 * Aquí me encontré con un problema:
+			 * En el coche en cada turno si solo acelero, se le va restando 5 de combustible
+			 * Entonces en la comprobación, a pesar de haber llegado a 100 kilometros recorridos, como primero
+			 * Estaba el comprobar combustible, ganaba la moto en vez de en este caso el coche.
+			 */
+			if ((seleccion.getCombustible() == 0 || seleccion.getCombustible() < 0) && motoContrincante.getCombustible() > 0) {
 				System.out.println("Gana " + motoContrincante.getNombre());
 				fin = true;
 				break;
-			} else if (seleccion.getCombustible() > 0 && motoContrincante.getCombustible() == 0) {
+			} else if (seleccion.getCombustible() > 0 && (motoContrincante.getCombustible() == 0 || motoContrincante.getCombustible() < 0)) {
 				System.out.println("Gana " + seleccion.getNombre());
 				fin = true;
 				break;
-			} else if (seleccion.getCombustible() == 0 && motoContrincante.getCombustible() == 0) {
+			} else if ((seleccion.getCombustible() == 0 || seleccion.getCombustible() < 0) && (motoContrincante.getCombustible() == 0 || motoContrincante.getCombustible() < 0)) {
 				System.out.println("Empate entre " + seleccion.getNombre() + " y " + motoContrincante);
 				fin = true;
 				break;
 			}
 			
-			if (seleccion.getDistanciaRecorrida() < 100 && motoContrincante.getDistanciaRecorrida() == 100) {
+			if (seleccion.getDistanciaRecorrida() < 100 && (motoContrincante.getDistanciaRecorrida() == 100 || motoContrincante.getDistanciaRecorrida() > 100)) {
 				System.out.println("Gana " + motoContrincante.getNombre() + ", distancia recorrida:" + motoContrincante.getCombustible());
 				fin = true;
 				break;
-			} else if (seleccion.getDistanciaRecorrida() == 100 && motoContrincante.getDistanciaRecorrida() < 100) {
+			} else if ((seleccion.getDistanciaRecorrida() == 100 || seleccion.getDistanciaRecorrida() > 100) && motoContrincante.getDistanciaRecorrida() < 100) {
 				System.out.println("Gana " + seleccion.getNombre() + ", distancia recorrida: " + seleccion.getDistanciaRecorrida());
 				fin = true;
 				break;
-			} else if (seleccion.getDistanciaRecorrida() == 100 && motoContrincante.getDistanciaRecorrida() == 100) {
+			} else if ((seleccion.getDistanciaRecorrida() == 100 || seleccion.getDistanciaRecorrida() > 100) && (motoContrincante.getDistanciaRecorrida() == 100 || motoContrincante.getDistanciaRecorrida() > 100)) {
 				System.out.println("Hay un empate entre " + seleccion.getNombre() + " y " + motoContrincante.getNombre() + ", ambos han recorrido " + seleccion.getDistanciaRecorrida());
 				fin = true;
 				break;
 			}
 		}
-		
+	System.out.println("\n¡Juego terminado!");
 	scanner.close();	
 	}
 }
